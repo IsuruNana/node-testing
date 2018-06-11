@@ -51,6 +51,16 @@ const convertCurrency = async (from, to, amount) => {
         You can spend it in the following countries: ${countries.join(', ')}`;
 }
 
+const doWork = async () => {
+    return 10;
+}
+
+doWork().then(data => {
+    console.log(data);
+}).catch(e => {
+    console.log('Something went wrong');
+});
+
 // getExchangeRate('USD', 'CAD').then(rate => {
 //     console.log(rate);
 // });
@@ -61,4 +71,6 @@ const convertCurrency = async (from, to, amount) => {
 
 convertCurrency('USD', 'CAD', 20).then(message => {
     console.log(message);
+}).catch(e => {
+    console.log(e.message);
 });
